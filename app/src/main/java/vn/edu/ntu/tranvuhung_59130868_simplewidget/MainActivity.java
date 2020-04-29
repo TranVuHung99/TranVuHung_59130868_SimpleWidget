@@ -58,11 +58,13 @@ public class MainActivity extends AppCompatActivity {
         String GT = "Giới Tính: ";
         switch (rdgGT.getCheckedRadioButtonId()) {
             case R.id.rbNam:
-                GT += "Nam";
+                GT = GT+ "Nam";
+                break;
 
             case R.id.rbNu:
-                GT += "Nữ";
-                //txtKQ.setText(new Float(kq).toString());
+                GT =GT+ "Nữ";
+                break;
+
 
         }
         String soThich="";
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         soThich+=khac;
         String str="Tên"+ten+
                 "\n Ngày Sinh: "+ns+
-                "\n Giới Tính: "+GT+
+                "\n "+GT+
                 "\n Sở Thích: "+soThich;
         Toast.makeText(getApplicationContext(),str,Toast.LENGTH_LONG).show();
     }
